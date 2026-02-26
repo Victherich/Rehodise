@@ -33,10 +33,6 @@ const Header = () => {
         <Nav ref={menuRef}>
           <Logo as={NavLink} to="/">
             <Img src={logo} alt="logo" />
-            <div>
-              Huda Giant Stride
-              <span>Travel & Tours Ltd</span>
-            </div>
           </Logo>
 
           <MenuIcon onClick={() => setMenuOpen(!menuOpen)}>
@@ -51,21 +47,21 @@ const Header = () => {
               <StyledLink to="/about" onClick={closeMenu}>ABOUT</StyledLink>
             </li>
             <li>
-              <StyledLink to="/hotels" onClick={closeMenu}>HOTELS</StyledLink>
+              <StyledLink to="/solutions" onClick={closeMenu}>OUR SOLUTIONS</StyledLink>
             </li>
             <li>
-              <StyledLink to="/flights" onClick={closeMenu}>FLIGHTS</StyledLink>
+              <StyledLink to="/flights" onClick={closeMenu}>PROJECTS & IMPACTS</StyledLink>
             </li>
             <li>
-              <StyledLink to="/tours" onClick={closeMenu}>TOURS</StyledLink>
+              <StyledLink to="/tours" onClick={closeMenu}>SUSTAINABILITY & SDGs</StyledLink>
             </li>
             <HeaderDropdown/>
-            <li>
+            {/* <li>
               <StyledLink to="/contact" onClick={closeMenu}>CONTACT</StyledLink>
-            </li>
+            </li> */}
           </NavLinks>
 
-          <CTAButton onClick={()=>navigate('/hotels')}>Book Now</CTAButton>
+          <CTAButton onClick={()=>navigate('/contact')}>Get in Touch</CTAButton>
         </Nav>
       </Fade>
     </HeaderContainer>
@@ -88,7 +84,7 @@ const HeaderContainer = styled.header`
 const Nav = styled.nav`
   // max-width: 1200px;
   margin: auto;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,7 +93,7 @@ const Nav = styled.nav`
 const Logo = styled.h1`
   font-size: 1.3rem;
   font-weight: 700;
-  color: #3D9346;
+  color: #1B67A8;
   line-height: 1.2;
   display: flex;
   gap: 10px;
@@ -138,21 +134,21 @@ const StyledLink = styled(NavLink)`
 
   &:hover,
   &.active {
-    color: #3D9346;
+    color: #1B67A8;
   }
 `;
 
 const CTAButton = styled.button`
-  background: #3D9346;
+  background: #1B67A8;
   color: white;
   border: none;
   padding: 0.7rem 1.4rem;
-  border-radius: 30px;
+  border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
 
   &:hover {
-    background: #2f7c38;
+    background: #1B67A8;
   }
 
   @media (max-width: 768px) {
@@ -164,7 +160,7 @@ const MenuIcon = styled.div`
   display: none;
   font-size: 1.4rem;
   cursor: pointer;
-  color: #3D9346;
+  color: #1B67A8;
 
   @media (max-width: 768px) {
     display: block;
@@ -172,5 +168,5 @@ const MenuIcon = styled.div`
 `;
 
 const Img = styled.img`
-  width: 100px;
+  width: 40px;
 `;

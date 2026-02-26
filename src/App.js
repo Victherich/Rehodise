@@ -5,12 +5,13 @@ import LandingPage from './components/LandingPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import AppUpdate from './components/AppUpdate';
 
 
 function App() {
   return (
-    <BrowserRouter>\
-    <App
+    <BrowserRouter>
+    <AppUpdate/>
     <ScrollToTop/>
     <Header/>
       <Routes>
