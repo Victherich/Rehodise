@@ -50,15 +50,20 @@ const Header = () => {
               <StyledLink to="/solutions" onClick={closeMenu}>OUR SOLUTIONS</StyledLink>
             </li>
             <li>
-              <StyledLink to="/flights" onClick={closeMenu}>PROJECTS & IMPACTS</StyledLink>
+              <StyledLink to="/projects" onClick={closeMenu}>PROJECTS & IMPACTS</StyledLink>
             </li>
             <li>
-              <StyledLink to="/tours" onClick={closeMenu}>SUSTAINABILITY & SDGs</StyledLink>
+              <StyledLink to="/sustainability" onClick={closeMenu}>SUSTAINABILITY & SDGs</StyledLink>
             </li>
-            <HeaderDropdown/>
-            {/* <li>
-              <StyledLink to="/contact" onClick={closeMenu}>CONTACT</StyledLink>
-            </li> */}
+            {/* <HeaderDropdown/> */}
+            <li>
+              <StyledLink to="/partnerships" onClick={closeMenu}>PARTNERSHIPS</StyledLink>
+            </li>
+
+             <li>
+              <StyledLink to="/resources" onClick={closeMenu}>RESOURCES / INSIGHTS</StyledLink>
+            </li>
+            <CTAButton2 onClick={()=>{navigate('/contact');closeMenu()}}>Get in Touch</CTAButton2>
           </NavLinks>
 
           <CTAButton onClick={()=>navigate('/contact')}>Get in Touch</CTAButton>
@@ -112,11 +117,14 @@ const NavLinks = styled.ul`
   gap: 2rem;
   list-style: none;
   transition: 0.3s;
+  font-size:0.8rem;
+  font-weight:bold;
 
   @media (max-width: 768px) {
     position: absolute;
-    top: 80px;
-    right: ${({ open }) => (open ? "0" : "-100%")};
+    top: 50px;
+    right:0;
+    display: ${({ open }) => (open ? "flex" : "none")};
     flex-direction: column;
     background: #fff;
     width: 250px;
@@ -153,6 +161,25 @@ const CTAButton = styled.button`
 
   @media (max-width: 768px) {
     display: none;
+  }
+`;
+
+const CTAButton2 = styled.button`
+  background: #1B67A8;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  display:none;
+
+  &:hover {
+    background: #1B67A8;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
   }
 `;
 
