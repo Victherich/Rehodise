@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import AppUpdate from './components/AppUpdate';
+import OurSolutionsPage from './components/OurSolutionsPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <Header/>
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
+        <Route path='/solutions' element={<OurSolutionsPage/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
