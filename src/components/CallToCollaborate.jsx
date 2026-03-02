@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import cta from '../Images/cta.jpeg'
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const CallToCollaborate = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
 
   return (
@@ -20,8 +21,8 @@ const CallToCollaborate = () => {
                 Whether you are a government agency, NGO, investor, or community leader, we are ready to collaborate and deliver impactful projects that advance renewable energy and smart agriculture.
               </Text>
               <Buttons>
-                <PrimaryBtn onClick={()=>navigate("/contact")}>Get in Touch</PrimaryBtn>
-                <SecondaryBtn onClick={()=>navigate('/about')}>Learn More</SecondaryBtn>
+                {/* <PrimaryBtn onClick={()=>navigate("/contact")}>Get in Touch</PrimaryBtn> */}
+                {location.pathname!=="/partnerships"&&<SecondaryBtn onClick={()=>navigate('/partnerships')}>Learn More</SecondaryBtn>}
               </Buttons>
             </Left>
           </Fade>

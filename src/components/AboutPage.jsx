@@ -308,6 +308,9 @@ import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 
+import introImage  from '../Images/im1.jpeg'
+import aboutImage  from '../Images/im2.png'
+
 // HERO IMAGE
 const heroImage =
   "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80";
@@ -330,35 +333,49 @@ const AboutPage = () => {
       {/* INTRO */}
       <Section>
         <Container>
+          <h2>COMPANY OVERVIEW</h2>
           <Fade direction="up">
             <TextBlock>
-              Welcome to Rehoboth Dunkemo Integrated Services and Energy Ltd.
+             Welcome to Rehoboth Dunkemo Integrated Services and Energy Ltd.
 
-              We are an integrated development and technology company committed to strengthening communities through renewable energy systems and climate-smart agricultural solutions. By combining modern engineering, smart farming practices and collaborative partnerships, we support improved food production, energy access and sustainable livelihoods.
+We are an integrated development and technology company committed to strengthening communities through renewable energy systems and climate-smart agricultural solutions. By combining modern engineering, smart farming practices and collaborative partnerships, we support improved food production, energy access and sustainable livelihoods.
 
-              Our focus is to deliver practical solutions that enhance productivity, promote environmental responsibility and create long-term economic value for communities, institutions and enterprises.
+Our focus is to deliver practical solutions that enhance productivity, promote environmental responsibility and create long-term economic value for communities, institutions and enterprises.
 
-              Whether you are a government agency, development organization, agribusiness operator, investor or community partner, we are ready to work with you to implement impactful and sustainable projects.
-            </TextBlock>
-          </Fade>
+Whether you are a government agency, development organization, agribusiness operator, investor or community partner, we are ready to work with you to implement impactful and sustainable projects.
+ </TextBlock>
+</Fade>
+            <Col>
+        <Image src={introImage} alt="intro" />
+      </Col>
+          
         </Container>
       </Section>
 
       {/* ABOUT */}
       <Section alt>
         <Container>
-          <Fade direction="up">
+         
             <h2>ABOUT US</h2>
+
+       
+           <Fade direction="left">  
             <TextBlock>
-              Rehoboth Dunkemo Integrated Services and Energy Ltd. is an integrated solutions and development company dedicated to advancing sustainable communities through the productive use of renewable energy and climate-smart agricultural systems.
+             Rehoboth Dunkemo Integrated Services and Energy Ltd. is an integrated solutions and development company dedicated to advancing sustainable communities through the productive use of renewable energy and climate-smart agricultural systems.
 
-              Our work combines clean energy technologies, modern agricultural practices, engineering expertise and collaborative partnerships to address critical development challenges including energy access, food security, job creation and environmental sustainability. We design and implement practical solutions that improve livelihoods while supporting long-term economic and ecological resilience.
+Our work combines clean energy technologies, modern agricultural practices, engineering expertise and collaborative partnerships to address critical development challenges including energy access, food security, job creation and environmental sustainability. We design and implement practical solutions that improve livelihoods while supporting long-term economic and ecological resilience.
 
-              Operating at the intersection of energy and agriculture, we support communities, institutions and enterprises with systems that power farms, enable agro-processing, improve productivity and reduce dependence on fossil fuels. Our approach emphasizes local participation, knowledge transfer and capacity building to ensure that projects remain sustainable beyond implementation.
+Operating at the intersection of energy and agriculture, we support communities, institutions and enterprises with systems that power farms, enable agro-processing, improve productivity and reduce dependence on fossil fuels. Our approach emphasizes local participation, knowledge transfer and capacity building to ensure that projects remain sustainable beyond implementation.
 
-              We partner with government agencies, development organizations, private sector stakeholders and local communities to deliver impactful initiatives that promote inclusive growth and responsible resource management.
-            </TextBlock>
-          </Fade>
+We partner with government agencies, development organizations, private sector stakeholders and local communities to deliver impactful initiatives that promote inclusive growth and responsible resource management.
+
+ </TextBlock>
+</Fade>
+             <Col>
+        <Image src={aboutImage} alt="about" />
+      </Col>
+       
+          
         </Container>
       </Section>
 
@@ -368,8 +385,7 @@ const AboutPage = () => {
           <Fade>
             <h3>OUR VISION</h3>
             <p>
-              To transform communities by enabling access to innovative renewable energy and sustainable agricultural solutions that drive prosperity, resilience and environmental stewardship.
-            </p>
+             To transform communities by enabling access to innovative renewable energy and sustainable agricultural solutions that drive prosperity, resilience and environmental stewardship. </p>
           </Fade>
         </Card>
 
@@ -377,36 +393,20 @@ const AboutPage = () => {
           <Fade>
             <h3>OUR MISSION</h3>
             <TextBlock>
-              To support sustainable development by delivering integrated energy and agricultural solutions that:
+             To support sustainable development by delivering integrated energy and agricultural solutions that:
+<br/>
+	Expand access to clean and reliable energy<br/>
+	Improve food production and agro-business productivity<br/>
+	Create employment and livelihood opportunities<br/>
+	Promote climate-responsible practices<br/>
+	Strengthen community participation and local capacity
 
-               Expand access to clean and reliable energy
-               Improve food production and agro-business productivity
-               Create employment and livelihood opportunities
-               Promote climate-responsible practices
-               Strengthen community participation and local capacity
             </TextBlock>
           </Fade>
         </Card>
       </Split>
 
-      {/* APPROACH */}
-      <Section>
-        <Container>
-          <Fade>
-            <h2>OUR APPROACH</h2>
-            <TextBlock>
-              We implement projects using a collaborative and impact-driven model:
-
-              1. Assess Community Needs – Identify energy and agricultural challenges
-              2. Design Practical Solutions – Integrate technology with local conditions
-              3. Implement Sustainably – Ensure environmental and social responsibility
-              4. Build Local Capacity – Train communities for long-term operation
-              5. Measure Impact – Track social, economic and environmental outcomes
-            </TextBlock>
-          </Fade>
-        </Container>
-      </Section>
-
+      
       {/* VALUES */}
       <Section alt>
         <Container>
@@ -423,18 +423,38 @@ const AboutPage = () => {
         </Container>
       </Section>
 
+      {/* APPROACH */}
+      <Section>
+        <Container>
+          <Fade>
+            <h2>OUR APPROACH</h2>
+            <TextBlock>
+             We implement projects using a collaborative and impact-driven model:
+<br/>
+1.	Assess Community Needs – Identify energy and agricultural challenges<br/>
+2.	Design Practical Solutions – Integrate technology with local conditions<br/>
+3.	Implement Sustainably – Ensure environmental and social responsibility<br/>
+4.	Build Local Capacity – Train communities for long-term operation<br/>
+5.	Measure Impact – Track social, economic and environmental outcomes
+
+            </TextBlock>
+          </Fade>
+        </Container>
+      </Section>
+
+
       {/* WHO WE ARE */}
       <Section>
         <Container>
           <Fade>
             <h2>WHO WE ARE</h2>
             <TextBlock>
-              Rehoboth Dunkemo Integrated Services and Energy Ltd is an integrated development and technology company focused on transforming communities through productive use of renewable energy and sustainable agricultural systems.
+             Rehoboth Dunkemo Integrated Services and Energy Ltd is an integrated development and technology company focused on transforming communities through productive use of renewable energy and sustainable agricultural systems.
 
-              We collaborate with farmers, agribusiness operators, government institutions, development organizations and private sector partners to deploy practical solutions that improve food production, energy access, job creation and environmental sustainability.
+We collaborate with farmers, agribusiness operators, government institutions, development organizations and private sector partners to deploy practical solutions that improve food production, energy access, job creation and environmental sustainability.
 
-              Our work connects energy, agriculture, engineering and innovation into one coordinated approach that supports economic growth and long-term community resilience.
-            </TextBlock>
+Our work connects energy, agriculture, engineering and innovation into one coordinated approach that supports economic growth and long-term community resilience.
+</TextBlock>
           </Fade>
         </Container>
       </Section>
@@ -446,28 +466,34 @@ const AboutPage = () => {
             <h2>WHAT WE DO</h2>
 
             <TextBlock>
-              Renewable Energy Solutions
+              <strong>
+                Renewable Energy Solutions:
+                </strong><br/>
 
-              Deployment of solar, mini-grid, off-grid, wind and small hydro systems designed to power homes, farms, agro-processing and rural enterprises.
-            </TextBlock>
+            Deployment of solar, mini-grid, off-grid, wind and small hydro systems designed to power homes, farms, agro-processing and rural enterprises.
 
-            <TextBlock>
-              Smart Agriculture & Agribusiness.
-
-              Mechanized farming, Farm Animals and Farm Birds, agro-processing support and climate-smart agricultural practices that increase productivity and food availability.
-            </TextBlock>
+ </TextBlock>
 
             <TextBlock>
-              Engineering & Environmental Services
+              <strong>
+ Smart Agriculture & Agribusiness:
+              </strong><br/>
+            
 
-              Project design, environmental and social impact assessment, compliance support and implementation supervision for sustainable infrastructure projects.
-            </TextBlock>
+             Mechanized farming, Farm Animals and Farm Birds, agro-processing support and climate-smart agricultural practices that increase productivity and food availability.  </TextBlock>
 
             <TextBlock>
-              Equipment, Logistics & Technical Support
+              <strong>
+                Engineering & Environmental Services:
+              </strong><br/>
+            
+Project design, environmental and social impact assessment, compliance support and implementation supervision for sustainable infrastructure projects.
+</TextBlock>
 
-              Supply of agricultural machinery, consultancy services, inspection technologies and logistics support for agricultural and energy operations.
-            </TextBlock>
+            <TextBlock><strong>
+              Equipment, Logistics & Technical Support:
+            </strong><br/>
+            Supply of agricultural machinery, consultancy services, inspection technologies and logistics support for agricultural and energy operations.     </TextBlock>
 
           </Fade>
         </Container>
@@ -479,15 +505,16 @@ const AboutPage = () => {
           <Fade>
             <h2>OUR IMPACT</h2>
             <TextBlock>
-              Our programs are designed to support community prosperity through the productive use of energy and improved agricultural systems.
+             Our programs are designed to support community prosperity through the productive use of energy and improved agricultural systems.
+<br/><br/>
+We contribute to:<br/>
 
-              We contribute to:
+	Poverty reduction through job creation<br/>
+	Increased food production and availability<br/>
+	Access to clean and reliable energy<br/>
+	Sustainable local economic development<br/>
+	Climate change mitigation initiatives
 
-               Poverty reduction through job creation
-               Increased food production and availability
-               Access to clean and reliable energy
-               Sustainable local economic development
-               Climate change mitigation initiatives
             </TextBlock>
           </Fade>
         </Container>
@@ -499,10 +526,10 @@ const AboutPage = () => {
           <Fade>
             <h2>SUSTAINABILITY COMMITMENT</h2>
             <TextBlock>
-              We integrate renewable energy and agriculture to reduce dependence on fossil fuels, support climate-smart production, and improve environmental outcomes.
-
-              Our activities promote clean energy adoption, efficient resource use and responsible land management while empowering local communities to actively participate in development projects.
-            </TextBlock>
+             We integrate renewable energy and agriculture to reduce dependence on fossil fuels, support climate-smart production, and improve environmental outcomes.
+<br/><br/>
+Our activities promote clean energy adoption, efficient resource use and responsible land management while empowering local communities to actively participate in development projects.
+</TextBlock>
           </Fade>
         </Container>
       </Section>
@@ -513,9 +540,8 @@ const AboutPage = () => {
           <Fade>
             <h2>PARTNERSHIPS</h2>
             <TextBlock>
-              We work with public institutions, development organizations, investors, NGOs and private enterprises to design and implement sustainable projects that deliver measurable social and economic benefits.
-
-              Interested in collaboration? We welcome partnerships that advance energy access, food security and community development.
+              We work with public institutions, development organizations, investors, NGOs and private enterprises to design and implement sustainable projects that deliver measurable social and economic benefits.<br/><br/>
+              Interested in collaboration?<br/> We welcome partnerships that advance energy access, food security and community development.
             </TextBlock>
           </Fade>
         </Container>
@@ -594,4 +620,24 @@ const Value = styled.div`
   background: #fff;
   padding: 20px;
   border-radius: 10px;
+`;
+
+const Row = styled.div`
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  // max-width: 400px;
+  height:300px;
+  border-radius: 12px;
+  object-fit:cover;
+`;
+
+const Col = styled.div`
+  flex: 1;
+  min-width: 300px;
 `;

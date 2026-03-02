@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
+import im4 from '../Images/im4.jpeg'
+ import Swal from "sweetalert2";
 
 // HERO IMAGE
 const heroImage =
@@ -19,11 +21,78 @@ const PartnershipsPage = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(form);
-    alert("Partnership request submitted!");
-  };
+ 
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  Swal.fire({
+    title: "Submitting...",
+    text: "Please wait while we send your request",
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
+  try {
+    const res = await fetch(
+      "https://rehodise.com.ng/api/partnership_form_endpoint.php",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      }
+    );
+
+    const data = await res.json();
+    Swal.close();
+
+    if (data.success) {
+      
+    Swal.fire({
+  icon: "success",
+  title: "Request Submitted!",
+  text: data.message,
+  confirmButtonColor: "#1b67a8",
+  allowOutsideClick:false
+}).then((result) => {
+  if (result.isConfirmed) {
+    window.location.reload();
+  }
+});
+
+      setForm({
+        name: "",
+        organization: "",
+        email: "",
+        type: "",
+        message: "",
+      });
+
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: data.error,
+        confirmButtonColor: "#ff4d4d",
+      });
+    }
+
+  } catch (err) {
+    Swal.close();
+
+    Swal.fire({
+      icon: "error",
+      title: "Network Error",
+      text: "Please check your connection and try again.",
+    });
+
+    console.error(err);
+  }
+};
 
   return (
     <Page>
@@ -110,6 +179,7 @@ const PartnershipsPage = () => {
       {/* HOW WE COLLABORATE */}
       <Section>
         <Container>
+           <img src={im4} alt="logo" style={{width:"100%", height:"200px", objectFit:"cover"}}/>
           <Fade>
             <h2>How We Collaborate</h2>
           </Fade>
@@ -167,7 +237,7 @@ const PartnershipsPage = () => {
       <FormSection>
         <Container>
           <Fade>
-            <h2>Become a Partner</h2>
+            <h2 style={{color:"white"}}>Become a Partner</h2>
             <p>Let’s build impactful and sustainable solutions together.</p>
           </Fade>
 

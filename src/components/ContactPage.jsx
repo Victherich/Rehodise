@@ -1,28 +1,97 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
+import Swal from 'sweetalert2'
 
 /* HERO IMAGE */
 const heroImage =
   "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80";
 
 const ContactPage = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    type: "",
-    message: "",
-  });
+const [form, setForm] = useState({
+  name: "",
+  email: "",
+  phone: "",
+  message: "",
+});
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(form);
-    alert("Message sent successfully!");
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  // 🔄 SHOW LOADING
+  Swal.fire({
+    title: "Sending...",
+    text: "Please wait while we process your message",
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
+  try {
+    const res = await fetch(
+      "https://rehodise.com.ng/api/contact_form_endpoint.php", // 🔥 CHANGE THIS
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+        }),
+      }
+    );
+
+    const data = await res.json();
+
+    // ✅ CLOSE LOADING FIRST
+    Swal.close();
+
+    if (data.success) {
+      Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: data.message,
+        confirmButtonColor: "#1b67a8",
+      });
+
+      // RESET FORM
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: data.error,
+        confirmButtonColor: "#ff4d4d",
+      });
+    }
+
+  } catch (err) {
+    Swal.close();
+
+    Swal.fire({
+      icon: "error",
+      title: "Network Error",
+      text: "Something went wrong. Please try again.",
+      confirmButtonColor: "#ff4d4d",
+    });
+
+    console.error(err);
+  }
+};
 
   return (
     <Page>
@@ -72,12 +141,13 @@ const ContactPage = () => {
 
             <Info>
               <h4>Phone</h4>
-              <p>+234 XXX XXX XXXX</p>
+              <p>+234 806 487 6315</p>
             </Info>
 
             <Info>
               <h4>Email</h4>
-              <p>info@rehobothdunkemo.com</p>
+              <p>info@rehodise.com.ng</p>
+              <p>info@rehodise.com.ng</p>
             </Info>
 
             <Info>
@@ -105,12 +175,14 @@ const ContactPage = () => {
                 required
               />
 
-              <select name="type" onChange={handleChange} required>
-                <option value="">Inquiry Type</option>
-                <option>Business Inquiry</option>
-                <option>Partnership Inquiry</option>
-                <option>Project Funding</option>
-              </select>
+       
+
+              <input
+  name="phone"
+  placeholder="Phone Number"
+  onChange={handleChange}
+  required
+/>
 
               <textarea
                 name="message"

@@ -1,13 +1,77 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import rs1 from '../Images/rs1.png';
+import Swal from "sweetalert2";
 
 /* HERO IMAGE */
 const heroImage =
  rs1
 
 const ResourcesPage = () => {
+const [email, setEmail] = useState("");
+
+
+
+const handleSubscribe = async (e) => {
+  e.preventDefault();
+
+  // 🔄 Loading
+  Swal.fire({
+    title: "Subscribing...",
+    text: "Please wait",
+    allowOutsideClick: false,
+    didOpen: () => {
+      Swal.showLoading();
+    },
+  });
+
+  try {
+    const res = await fetch(
+      "https://rehodise.com.ng/api/newsletter_endpoint.php",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      }
+    );
+
+    const data = await res.json();
+    Swal.close();
+
+    if (data.success) {
+      Swal.fire({
+        icon: "success",
+        title: "Subscribed!",
+        text: data.message,
+        confirmButtonColor: "#1b67a8",
+      });
+
+      setEmail("");
+
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: data.error,
+      });
+    }
+
+  } catch (err) {
+    Swal.close();
+
+    Swal.fire({
+      icon: "error",
+      title: "Network Error",
+      text: "Please try again.",
+    });
+
+    console.error(err);
+  }
+};
+
   return (
     <Page>
 
@@ -107,10 +171,17 @@ const ResourcesPage = () => {
             Get the latest insights on renewable energy, agriculture and sustainable development.
           </p>
 
-          <Form>
-            <input type="email" placeholder="Enter your email" />
-            <button>Subscribe</button>
-          </Form>
+         <Form onSubmit={handleSubscribe}>
+  <input
+    type="email"
+    placeholder="Enter your email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    required
+  />
+
+  <button type="submit">Subscribe</button>
+</Form>
         </Fade>
       </Newsletter>
 
@@ -266,7 +337,7 @@ const Newsletter = styled.section`
   padding: 80px 20px;
 `;
 
-const Form = styled.div`
+const Form = styled.form`
   margin-top: 20px;
   display: flex;
   justify-content: center;

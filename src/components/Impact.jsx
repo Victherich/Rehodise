@@ -10,16 +10,18 @@ const Impact = () => {
           {/* LEFT SIDE */}
           <Fade direction="left" triggerOnce={false}>
             <Left>
-              <SmallTitle>Our Impact</SmallTitle>
+              <SmallTitle>Our Impacts</SmallTitle>
               <Title>
-                Driving Change Through Sustainable Energy and Agriculture
+               
+Our programs are designed to support community prosperity through the productive use of energy and improved agricultural systems.
+
               </Title>
-              <Text>
+              {/* <Text>
                 Our work is focused on creating real, measurable impact by
                 addressing some of the most pressing challenges facing
                 communities today. From reducing poverty to advancing climate
                 action, we deliver solutions that improve lives and protect the environment.
-              </Text>
+              </Text> */}
             </Left>
           </Fade>
 
@@ -29,33 +31,49 @@ const Impact = () => {
               <ImpactItem>
                 <Number>01</Number>
                 <Content>
-                  <ItemTitle>Poverty Reduction</ItemTitle>
-                  <ItemText>
+                  <ItemTitle>	Poverty reduction through job creation</ItemTitle>
+                  {/* <ItemText>
                     We create jobs, empower farmers and support local economies
                     through energy access and improved agricultural productivity.
-                  </ItemText>
+                  </ItemText> */}
                 </Content>
               </ImpactItem>
 
               <ImpactItem>
                 <Number>02</Number>
                 <Content>
-                  <ItemTitle>Climate Action</ItemTitle>
-                  <ItemText>
+                  <ItemTitle>Increased food production and availability</ItemTitle>
+                  {/* <ItemText>
                     We promote clean energy adoption and climate-smart farming
                     practices that reduce emissions and protect natural resources.
-                  </ItemText>
+                  </ItemText> */}
                 </Content>
               </ImpactItem>
 
               <ImpactItem>
                 <Number>03</Number>
                 <Content>
-                  <ItemTitle>Food Security</ItemTitle>
-                  <ItemText>
+                  <ItemTitle>Access to clean and reliable energy</ItemTitle>
+                  {/* <ItemText>
                     By improving agricultural systems, we help increase food
                     production and ensure reliable access to nutritious food.
-                  </ItemText>
+                  </ItemText> */}
+                </Content>
+              </ImpactItem>
+
+               <ImpactItem>
+                <Number>04</Number>
+                <Content>
+                  <ItemTitle>Sustainable local economic development</ItemTitle>
+                
+                </Content>
+              </ImpactItem>
+
+                <ImpactItem>
+                <Number>05</Number>
+                <Content>
+                  <ItemTitle>Climate change mitigation initiatives</ItemTitle>
+                
                 </Content>
               </ImpactItem>
             </Fade>
@@ -107,7 +125,7 @@ const SmallTitle = styled.p`
 `;
 
 const Title = styled.h2`
-  font-size: 38px;
+  font-size: 2rem;
   line-height: 1.3;
   margin-bottom: 20px;
 `;

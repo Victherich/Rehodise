@@ -37,6 +37,38 @@ const initiatives = [
   },
 ];
 
+const InitiativeSlider = ({ offset }) => {
+  const [current, setCurrent] = useState(offset);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % initiatives.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <Slider>
+      {initiatives.map((item, i) => (
+        <Slide
+          key={i}
+          className={i === current ? "active" : ""}
+          style={{ backgroundImage: `url(${item.image})` }}
+        >
+          <Overlay />
+          <SlideContent>
+            <Fade direction="up" triggerOnce={false}>
+              <SlideTitle>{item.title}</SlideTitle>
+              <SlideText>{item.description}</SlideText>
+            </Fade>
+          </SlideContent>
+        </Slide>
+      ))}
+    </Slider>
+  );
+};
+
 const FeaturedInitiatives = () => {
   const [current, setCurrent] = useState(0);
 
@@ -55,7 +87,7 @@ const FeaturedInitiatives = () => {
           <MainTitle>Featured Initiatives</MainTitle>
         </Header>
 
-        <Slider>
+        {/* <Slider>
           {initiatives.map((item, i) => (
             <Slide
               key={i}
@@ -72,6 +104,47 @@ const FeaturedInitiatives = () => {
             </Slide>
           ))}
         </Slider>
+
+         <Slider>
+          {initiatives.map((item, i) => (
+            <Slide
+              key={i}
+              className={i === current ? "active" : ""}
+              style={{ backgroundImage: `url(${item.image})` }}
+            >
+              <Overlay />
+              <SlideContent>
+                <Fade direction="up" triggerOnce={false}>
+                  <SlideTitle>{item.title}</SlideTitle>
+                  <SlideText>{item.description}</SlideText>
+                </Fade>
+              </SlideContent>
+            </Slide>
+          ))}
+        </Slider>
+
+         <Slider>
+          {initiatives.map((item, i) => (
+            <Slide
+              key={i}
+              className={i === current ? "active" : ""}
+              style={{ backgroundImage: `url(${item.image})` }}
+            >
+              <Overlay />
+              <SlideContent>
+                <Fade direction="up" triggerOnce={false}>
+                  <SlideTitle>{item.title}</SlideTitle>
+                  <SlideText>{item.description}</SlideText>
+                </Fade>
+              </SlideContent>
+            </Slide>
+          ))}
+        </Slider> */}
+
+        <InitiativeSlider offset={0} />
+        <br/><br/>
+<InitiativeSlider offset={1} /><br/><br/>
+<InitiativeSlider offset={2} />
       </Container>
     </Section>
   );

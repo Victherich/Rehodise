@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
+import im3 from '../Images/im3.jpeg'
 
 // HERO IMAGE
 const heroImage =
@@ -96,10 +97,12 @@ const SustainabilityPage = () => {
 
       {/* IMPACT EXPLANATION */}
       <Section>
-        <Container>
-          <Fade>
+      <div >
+        <Img src={im3} alt="logo" style={{width:"100%", height:"200px", objectFit:"cover"}}/>
+          <Container>
+          <Fade direction="left">
             <h2>How We Deliver Impact</h2>
-          </Fade>
+          
 
           <ImpactList>
 
@@ -136,7 +139,9 @@ const SustainabilityPage = () => {
             </ImpactItem>
 
           </ImpactList>
+          </Fade>
         </Container>
+      </div>
       </Section>
 
       {/* CSR */}
@@ -287,6 +292,10 @@ const CSRCard = styled.div`
   padding: 25px;
   border-radius: 12px;
 `;
+
+const Img = styled.img`
+
+`
 
 // const CTA = styled.section`
 //   background: #1b67a8;

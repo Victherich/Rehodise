@@ -63,10 +63,13 @@ const Header = () => {
              <li>
               <StyledLink to="/resources" onClick={closeMenu}>RESOURCES / INSIGHTS</StyledLink>
             </li>
-            <CTAButton2 onClick={()=>{navigate('/contact');closeMenu()}}>Get in Touch</CTAButton2>
+            <li>
+              <StyledLink to="/contact" onClick={closeMenu}>CONTACT US</StyledLink>
+            </li>
+            {/* <CTAButton2 onClick={()=>{navigate('/contact');closeMenu()}}>Get in Touch</CTAButton2> */}
           </NavLinks>
 
-          <CTAButton onClick={()=>navigate('/contact')}>Get in Touch</CTAButton>
+          {/* <CTAButton onClick={()=>navigate('/contact')}>Get in Touch</CTAButton> */}
         </Nav>
       </Fade>
     </HeaderContainer>
@@ -114,7 +117,7 @@ const Logo = styled.h1`
 
 const NavLinks = styled.ul`
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   list-style: none;
   transition: 0.3s;
   font-size:0.8rem;

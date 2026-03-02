@@ -12,10 +12,11 @@ const heroImage =
   pr
 // STATS DATA
 const stats = [
-  { number: "25+", label: "Communities Electrified" },
+  { number: "25+", label: "Communities Served" },
+    { number: "3,200+", label: "Jobs Created" },
   { number: "5,000+", label: "Farms Supported" },
-  { number: "3,200+", label: "Jobs Created" },
-  { number: "18,000+", label: "Tons of CO₂ Reduced" },
+
+  { number: "18,000+", label: "CO₂ Reduction" },
 ];
 
 // PROJECTS DATA

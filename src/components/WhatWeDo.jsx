@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
-import { FaSolarPanel, FaSeedling, FaTools } from "react-icons/fa";
+import { FaSolarPanel, FaSeedling, FaTools, FaTractor } from "react-icons/fa";
 
 const WhatWeDo = () => {
   return (
@@ -25,10 +25,9 @@ const WhatWeDo = () => {
               <IconWrapper>
                 <FaSolarPanel />
               </IconWrapper>
-              <CardTitle>Renewable Energy</CardTitle>
+              <CardTitle>Renewable Energy Solutions</CardTitle>
               <CardText>
-                We deploy solar, mini-grid and off-grid energy systems to power
-                homes, farms and agro-processing operations efficiently and sustainably.
+                Deployment of solar, mini-grid, off-grid, wind and small hydro systems designed to power homes, farms, agro-processing and rural enterprises.
               </CardText>
             </Card>
 
@@ -36,10 +35,9 @@ const WhatWeDo = () => {
               <IconWrapper>
                 <FaSeedling />
               </IconWrapper>
-              <CardTitle>Smart Agriculture</CardTitle>
+              <CardTitle>Smart Agriculture & Agribusiness.</CardTitle>
               <CardText>
-                We implement climate-smart farming, mechanization and agribusiness
-                solutions that improve productivity and food security.
+              Mechanized farming, Farm Animals and Farm Birds, agro-processing support and climate-smart agricultural practices that increase productivity and food availability.
               </CardText>
             </Card>
 
@@ -47,11 +45,19 @@ const WhatWeDo = () => {
               <IconWrapper>
                 <FaTools />
               </IconWrapper>
-              <CardTitle>Engineering Services</CardTitle>
+              <CardTitle>Engineering & Environmental Services</CardTitle>
               <CardText>
-                We provide project design, environmental assessments and technical
-                supervision to ensure efficient and sustainable infrastructure development.
+                Project design, environmental and social impact assessment, compliance support and implementation supervision for sustainable infrastructure projects.
               </CardText>
+            </Card>
+
+             <Card>
+              <IconWrapper>
+                <FaTractor />
+              </IconWrapper>
+              <CardTitle>Equipment, Logistics & Technical Support</CardTitle>
+              <CardText>
+               Supply of agricultural machinery, consultancy services, inspection technologies and logistics support for agricultural and energy operations.   </CardText>
             </Card>
           </Fade>
         </Cards>
