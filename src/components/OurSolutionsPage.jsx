@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
+import sl1 from '../Images/sl1.png'
+import sl2 from '../Images/sl2.png'
+import sl3 from '../Images/sl3.png'
+import sl4 from '../Images/sl4.png'
+import sl from '../Images/sl.png'
 
 // ================= HERO IMAGE =================
-const heroImage = "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=1600&q=80";
-
+const heroImage = sl
 // ================= SOLUTIONS DATA =================
 const solutions = [
   {
@@ -16,8 +20,7 @@ const solutions = [
       "Smart energy monitoring",
       "Productive use of energy projects",
     ],
-    image: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&q=80",
-  },
+    image:sl1  },
   {
     title: "Smart Agriculture & Agribusiness",
     items: [
@@ -27,8 +30,7 @@ const solutions = [
       "Climate-smart farming",
       "Export & trading support",
     ],
-    image: "https://images.unsplash.com/photo-1560439516-2eeef204a9b0?auto=format&fit=crop&w=800&q=80",
-  },
+    image:sl2},
   {
     title: "Engineering & Environmental Services",
     items: [
@@ -37,8 +39,7 @@ const solutions = [
       "Project implementation supervision",
       "Infrastructure support",
     ],
-    image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=800&q=80",
-  },
+    image:sl3 },
   {
     title: "Equipment, Logistics & Consulting",
     items: [
@@ -47,8 +48,7 @@ const solutions = [
       "AI monitoring & inspection",
       "Project financing facilitation",
     ],
-    image: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80",
-  },
+    image:sl4 },
 ];
 
 const OurSolutionsPage = () => {
@@ -58,19 +58,33 @@ const OurSolutionsPage = () => {
       <HeroSection style={{ backgroundImage: `url(${heroImage})` }}>
         <HeroOverlay />
         <HeroContent>
-          <Fade direction="up" triggerOnce>
+          <Fade direction="up" triggerOnce={false}>
             <HeroSubtitle>Our Solutions</HeroSubtitle>
             <HeroTitle>Innovative Energy & Agricultural Solutions for Sustainable Communities</HeroTitle>
           </Fade>
         </HeroContent>
       </HeroSection>
 
+       {/* INTRO SECTION */}
+      <IntroSection>
+        <Fade direction="up" triggerOnce={false}>
+          <IntroText>
+            At Rehoboth Dunkemo Integrated Services and Energy Ltd., we deliver
+            integrated solutions that combine renewable energy, smart agriculture,
+            engineering expertise and technical support to address real-world
+            challenges. Our approach is designed to improve productivity, expand
+            energy access, enhance food systems and promote sustainable development
+            across communities and enterprises.
+          </IntroText>
+        </Fade>
+      </IntroSection>
+
       {/* SOLUTIONS DIVISIONS */}
       <SolutionsSection>
         {solutions.map((section, idx) => (
           <SolutionCard key={idx}>
             <SolutionImage style={{ backgroundImage: `url(${section.image})` }} />
-            <Fade direction="up" triggerOnce>
+            <Fade direction="up" triggerOnce={false}>
               <SolutionTitle>{section.title}</SolutionTitle>
               <ul>
                 {section.items.map((item, i) => (
@@ -138,6 +152,20 @@ const HeroTitle = styled.h1`
   @media (max-width: 768px) {
     font-size: 28px;
   }
+`;
+
+/* INTRO */
+const IntroSection = styled.section`
+  max-width: 900px;
+  margin: 60px auto 20px;
+  padding: 0 20px;
+  text-align: center;
+`;
+
+const IntroText = styled.p`
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
 `;
 
 /* ---------------- SOLUTIONS ---------------- */

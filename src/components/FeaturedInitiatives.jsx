@@ -64,7 +64,7 @@ const FeaturedInitiatives = () => {
             >
               <Overlay />
               <SlideContent>
-                <Fade direction="up" triggerOnce>
+                <Fade direction="up" triggerOnce={false}>
                   <SlideTitle>{item.title}</SlideTitle>
                   <SlideText>{item.description}</SlideText>
                 </Fade>
@@ -106,6 +106,7 @@ const SmallTitle = styled.p`
 
 const MainTitle = styled.h2`
   font-size: 36px;
+  color: #1b67a8;
 `;
 
 const Slider = styled.div`

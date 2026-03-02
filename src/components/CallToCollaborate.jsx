@@ -2,13 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-awesome-reveal";
 import cta from '../Images/cta.jpeg'
+import { useNavigate } from "react-router-dom";
 
 const CallToCollaborate = () => {
+  const navigate = useNavigate();
+
+
   return (
     <Section>
       <Container>
         <Grid>
-          <Fade direction="left" triggerOnce>
+          <Fade direction="left" triggerOnce={false}>
             <Left>
               <SmallTitle>Partner With Us</SmallTitle>
               <Title>Let’s Build Sustainable Communities Together</Title>
@@ -16,13 +20,13 @@ const CallToCollaborate = () => {
                 Whether you are a government agency, NGO, investor, or community leader, we are ready to collaborate and deliver impactful projects that advance renewable energy and smart agriculture.
               </Text>
               <Buttons>
-                <PrimaryBtn>Get in Touch</PrimaryBtn>
-                <SecondaryBtn>Learn More</SecondaryBtn>
+                <PrimaryBtn onClick={()=>navigate("/contact")}>Get in Touch</PrimaryBtn>
+                <SecondaryBtn onClick={()=>navigate('/about')}>Learn More</SecondaryBtn>
               </Buttons>
             </Left>
           </Fade>
 
-          <Fade direction="right" triggerOnce>
+          <Fade direction="right" triggerOnce={false}>
             <Right>
               {/* <Image src="https://images.unsplash.com/photo-1600180758895-7b5df20b6f5f?auto=format&fit=crop&w=800&q=80" alt="Collaboration" /> */}
             </Right>

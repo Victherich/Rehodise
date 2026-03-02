@@ -4,23 +4,20 @@ import styled from "styled-components";
 const partners = [
   {
     name: "FAO",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/FAO_logo.svg",
+    logo: "https://cdn-icons-png.flaticon.com/512/196/196565.png", // flat style FAO-inspired icon
   },
-  {
-    name: "UNDP",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/UNDP_logo.svg/2560px-UNDP_logo.svg.png",
-  },
+
   {
     name: "World Bank",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/World_Bank_logo.svg/2560px-World_Bank_logo.svg.png",
+    logo: "https://cdn-icons-png.flaticon.com/512/888/888879.png", // new flat-style World Bank / globe icon
   },
   {
     name: "Local Government",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Local_government_logo.svg/1024px-Local_government_logo.svg.png",
+    logo: "https://cdn-icons-png.flaticon.com/512/1035/1035687.png", // flat government/building icon
   },
   {
     name: "Private Agribusiness",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Generic_company_logo.svg/1024px-Generic_company_logo.svg.png",
+    logo: "https://cdn-icons-png.flaticon.com/512/2910/2910760.png", // flat farm/agribusiness icon
   },
 ];
 
@@ -30,7 +27,7 @@ const Partners = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setOffset((prev) => (prev + 1) % partners.length);
-    }, 3000);
+    }, 500);
     return () => clearInterval(interval);
   }, []);
 
@@ -86,6 +83,7 @@ const SmallTitle = styled.p`
 
 const MainTitle = styled.h2`
   font-size: 36px;
+  color: #1b67a8;
 `;
 
 const Carousel = styled.div`

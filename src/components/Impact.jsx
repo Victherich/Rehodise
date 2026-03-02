@@ -8,7 +8,7 @@ const Impact = () => {
       <Container>
         <Grid>
           {/* LEFT SIDE */}
-          <Fade direction="left" triggerOnce>
+          <Fade direction="left" triggerOnce={false}>
             <Left>
               <SmallTitle>Our Impact</SmallTitle>
               <Title>
@@ -25,7 +25,7 @@ const Impact = () => {
 
           {/* RIGHT SIDE */}
           <Right>
-            <Fade cascade damping={0.2} triggerOnce>
+            <Fade cascade damping={0.2} triggerOnce={false}>
               <ImpactItem>
                 <Number>01</Number>
                 <Content>

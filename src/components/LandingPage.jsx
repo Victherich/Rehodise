@@ -14,7 +14,7 @@ const LandingPage = () => {
       <Impact/>
       <FeaturedInitiatives/>
       <Partners/>
-      <CallToCollaborate/>
+     
     </div>
   )
 }

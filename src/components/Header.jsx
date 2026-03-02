@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <Fade triggerOnce direction="down">
+      <Fade triggerOnce={false} direction="down">
         <Nav ref={menuRef}>
           <Logo as={NavLink} to="/">
             <Img src={logo} alt="logo" />

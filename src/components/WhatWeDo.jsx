@@ -7,7 +7,7 @@ const WhatWeDo = () => {
   return (
     <Section>
       <Container>
-        <Fade direction="up" triggerOnce>
+        <Fade direction="up" triggerOnce={false}>
           <Header>
             <SmallTitle>Our Expertise</SmallTitle>
             <MainTitle>What We Do</MainTitle>
@@ -20,7 +20,7 @@ const WhatWeDo = () => {
         </Fade>
 
         <Cards>
-          <Fade cascade damping={0.2} triggerOnce>
+          <Fade cascade damping={0.2} triggerOnce={false}>
             <Card>
               <IconWrapper>
                 <FaSolarPanel />
@@ -91,6 +91,7 @@ const SmallTitle = styled.p`
 const MainTitle = styled.h2`
   font-size: 36px;
   margin-bottom: 20px;
+  color: #1b67a8;
 `;
 
 const Description = styled.p`
@@ -127,6 +128,7 @@ const IconWrapper = styled.div`
 const CardTitle = styled.h3`
   font-size: 20px;
   margin-bottom: 15px;
+  color: #1b67a8;
 `;
 
 const CardText = styled.p`

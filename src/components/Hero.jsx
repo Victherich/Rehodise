@@ -54,19 +54,19 @@ const Hero = () => {
 
       {/* Content */}
       <Content>
-        <Fade direction="up" triggerOnce>
+        <Fade direction="up" triggerOnce={false}>
           <Subtitle>
             Renewable Energy • Smart Agriculture • Sustainable Development
           </Subtitle>
         </Fade>
 
-        <Slide direction="up" triggerOnce>
+        <Slide direction="up" triggerOnce={false}>
           <Title>
             Advancing Sustainable Communities Through Renewable Energy and Smart Agriculture
           </Title>
         </Slide>
 
-        <Fade delay={300} triggerOnce>
+        <Fade delay={300} triggerOnce={false}>
           <Buttons>
             <PrimaryBtn onClick={()=>navigate('/contact')}>Get in Touch</PrimaryBtn>
             <SecondaryBtn onClick={()=>navigate('/solutions')}>Our Solutions</SecondaryBtn>

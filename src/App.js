@@ -7,6 +7,13 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import AppUpdate from './components/AppUpdate';
 import OurSolutionsPage from './components/OurSolutionsPage';
+import CallToCollaborate from './components/CallToCollaborate';
+import ProjectsImpactPage from './components/ProjectsImpactPage';
+import AboutPage from './components/AboutPage';
+import SustainabilityPage from './components/SustainabilityPage';
+import PartnershipsPage from './components/PartnershipsPage';
+import ResourcesPage from './components/ResourcesPage';
+import ContactPage from './components/ContactPage';
 
 
 function App() {
@@ -18,7 +25,14 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/solutions' element={<OurSolutionsPage/>}/>
+        <Route path='/projects' element={<ProjectsImpactPage/>}/>
+        <Route path='/about' element={<AboutPage/>}/>
+        <Route path='/sustainability' element={<SustainabilityPage/>}/>
+        <Route path='/partnerships' element={<PartnershipsPage/>}/>
+        <Route path='/resources' element={<ResourcesPage/>}/>
+        <Route path='/contact' element={<ContactPage/>}/>
       </Routes>
+      <CallToCollaborate/>
       <Footer/>
     </BrowserRouter>
   );
