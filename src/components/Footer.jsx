@@ -12,7 +12,7 @@ const Footer = () => {
           {/* LOGO & BRAND */}
           <Brand>
             <Logo src={LogoImage} alt="Rehoboth Dunkemo Logo" />
-            <Tagline>Advancing Sustainable Communities Through Energy & Agriculture</Tagline>
+            <Tagline>We are an integrated development and technology company committed to strengthening communities through renewable energy systems and climate-smart agricultural solutions. By combining modern engineering, smart farming practices and collaborative partnerships, we support improved food production, energy access and sustainable livelihoods.</Tagline>
           </Brand>
 
           {/* NAV LINKS */}
@@ -27,7 +27,7 @@ const Footer = () => {
                 <li><StyledLink to="/sustainability">Sustainability & SDGs</StyledLink></li>
                 <li><StyledLink to="/partnerships">Partnerships</StyledLink></li>
                 <li><StyledLink to="/resources">Resources / Insights</StyledLink></li>
-                <li><StyledLink to="/contact">Get in Touch</StyledLink></li>
+                <li><StyledLink to="/contact">Contact</StyledLink></li>
               </NavList>
             </NavColumn>
 
@@ -36,16 +36,17 @@ const Footer = () => {
               <ColumnTitle>Contact Us</ColumnTitle>
               <ContactInfo>
                 <p>Email: <a href="mailto:info@rehobothdunkemo.com">info@rehobothdunkemo.com</a></p>
-                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p>Email: <a href="mailto:rehobothdunkemointegrated@gmail.com">rehobothdunkemointegrated@gmail.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+234 806 487 6315</a></p>
                 <p>Address: 123 Greenway Ave, Agrotech City</p>
               </ContactInfo>
-
+{/* 
               <Social>
                 <SocialIcon href="#"><FaFacebookF /></SocialIcon>
                 <SocialIcon href="#"><FaTwitter /></SocialIcon>
                 <SocialIcon href="#"><FaLinkedinIn /></SocialIcon>
                 <SocialIcon href="#"><FaInstagram /></SocialIcon>
-              </Social>
+              </Social> */}
             </NavColumn>
           </Nav>
         </Top>
@@ -53,7 +54,7 @@ const Footer = () => {
         <Bottom>
           <p>© {new Date().getFullYear()} Rehoboth Dunkemo Integrated Services and Energy Ltd. All rights reserved.</p>
         <br/>
-        <p>
+        <p onClick={()=>window.open('https://elexdontech.com',"_blank")} style={{cursor:"pointer", textDecoration:"underline"}}>
           POWERED BY ELEXDON DIGITAL TECHNOLOGIES LIMITED
         </p>
         </Bottom>
@@ -69,7 +70,7 @@ export default Footer;
 const FooterSection = styled.footer`
   background: #1b67a8;
   color: #fff;
-  padding: 60px 20px 30px;
+  padding: 20px 20px 30px;
 `;
 
 const Container = styled.div`
@@ -91,7 +92,7 @@ const Brand = styled.div`
 
 const Logo = styled.img`
   max-width: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 `;
 
 const Tagline = styled.p`

@@ -147,7 +147,7 @@ const handleSubmit = async (e) => {
             <Info>
               <h4>Email</h4>
               <p>info@rehodise.com.ng</p>
-              <p>info@rehodise.com.ng</p>
+              <p>rehobothdunkemointegrated@gmail.com</p>
             </Info>
 
             <Info>

@@ -14,7 +14,7 @@ import SustainabilityPage from './components/SustainabilityPage';
 import PartnershipsPage from './components/PartnershipsPage';
 import ResourcesPage from './components/ResourcesPage';
 import ContactPage from './components/ContactPage';
-
+import wp from './Images/whatsapplogo.png';
 
 function App() {
   return (
@@ -32,6 +32,8 @@ function App() {
         <Route path='/resources' element={<ResourcesPage/>}/>
         <Route path='/contact' element={<ContactPage/>}/>
       </Routes>
+       <a><img src={wp} alt="logo" className="WhatsAppIcon" onClick={() => window.open("https://wa.me/2348064876315", "_blank")} /></a> 
+   
       <CallToCollaborate/>
       <Footer/>
     </BrowserRouter>
