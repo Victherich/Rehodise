@@ -152,7 +152,7 @@ const handleSubmit = async (e) => {
 
             <Info>
               <h4>Location</h4>
-              <p>Lagos, Nigeria</p>
+              <p>15, Amaozarah New Layout, Amaozarah, Ebonyi State.</p>
             </Info>
           </Fade>
         </Left>
@@ -291,6 +291,12 @@ const Split = styled.section`
 const Left = styled.div`
   padding: 60px;
   background: #1b67a8;
+    background: linear-gradient(
+    120deg,
+    #1b67a8 0%,
+    #0d1b2a 60%,
+    #3a0d0d 100%
+  );
   color: #fff;
 `;
 

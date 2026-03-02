@@ -38,7 +38,7 @@ const Footer = () => {
                 <p>Email: <a href="mailto:info@rehobothdunkemo.com">info@rehobothdunkemo.com</a></p>
                 <p>Email: <a href="mailto:rehobothdunkemointegrated@gmail.com">rehobothdunkemointegrated@gmail.com</a></p>
                 <p>Phone: <a href="tel:+1234567890">+234 806 487 6315</a></p>
-                <p>Address: 123 Greenway Ave, Agrotech City</p>
+                <p>Address: 15, Amaozarah New Layout, Amaozarah, Ebonyi State</p>
               </ContactInfo>
 {/* 
               <Social>
@@ -68,7 +68,13 @@ export default Footer;
 /* ================= STYLES ================= */
 
 const FooterSection = styled.footer`
-  background: #1b67a8;
+  // background: #1b67a8;
+ background: linear-gradient(
+    120deg,
+    #1b67a8 0%,
+    #0d1b2a 60%,
+    #3a0d0d 100%
+  );
   color: #fff;
   padding: 20px 20px 30px;
 `;

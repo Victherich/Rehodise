@@ -389,7 +389,7 @@ We partner with government agencies, development organizations, private sector s
           </Fade>
         </Card>
 
-        <Card dark>
+        <Card2 dark>
           <Fade>
             <h3>OUR MISSION</h3>
             <TextBlock>
@@ -403,7 +403,7 @@ We partner with government agencies, development organizations, private sector s
 
             </TextBlock>
           </Fade>
-        </Card>
+        </Card2>
       </Split>
 
       
@@ -607,6 +607,18 @@ const Card = styled.div`
   flex: 1;
   padding: 60px;
   background: ${({ dark }) => (dark ? "#1b67a8" : "#fff")};
+  color: ${({ dark }) => (dark ? "#fff" : "#333")};
+`;
+
+const Card2 = styled.div`
+  flex: 1;
+  padding: 60px;
+  background: linear-gradient(
+    120deg,
+    #1b67a8 0%,
+    #0d1b2a 60%,
+    #3a0d0d 100%
+  );
   color: ${({ dark }) => (dark ? "#fff" : "#333")};
 `;
 

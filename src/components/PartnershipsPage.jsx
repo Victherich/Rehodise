@@ -372,7 +372,13 @@ const Step = styled.div`
 
 const FormSection = styled.section`
   padding: 80px 20px;
-  background: #1b67a8;
+//   background: #1b67a8;
+    background: linear-gradient(
+    120deg,
+    #1b67a8 0%,
+    #0d1b2a 60%,
+    #3a0d0d 100%
+  );
   color: #fff;
   text-align: center;
 `;
