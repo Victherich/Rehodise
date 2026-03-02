@@ -310,6 +310,7 @@ import { Fade } from "react-awesome-reveal";
 
 import introImage  from '../Images/im1.jpeg'
 import aboutImage  from '../Images/im2.png'
+import ab1 from '../Images/ab1.jpeg'
 
 // HERO IMAGE
 const heroImage =
@@ -352,32 +353,48 @@ Whether you are a government agency, development organization, agribusiness oper
         </Container>
       </Section>
 
-      {/* ABOUT */}
-      <Section alt>
-        <Container>
-         
-            <h2>ABOUT US</h2>
+{/* ABOUT */}
+<Section alt>
+  <Container style={{ 
+    display: "flex", 
+    flexDirection: "column", 
+    alignItems: "center", 
+    justifyContent: "center", 
+    textAlign: "center" 
+  }}>
 
-       
-           <Fade direction="left">  
-            <TextBlock>
-             Rehoboth Dunkemo Integrated Services and Energy Ltd. is an integrated solutions and development company dedicated to advancing sustainable communities through the productive use of renewable energy and climate-smart agricultural systems.
+    <h2 style={{ textAlign: "center" }}>ABOUT US</h2>
 
-Our work combines clean energy technologies, modern agricultural practices, engineering expertise and collaborative partnerships to address critical development challenges including energy access, food security, job creation and environmental sustainability. We design and implement practical solutions that improve livelihoods while supporting long-term economic and ecological resilience.
+    <Fade direction="left">
+      <TextBlock style={{ 
+        maxWidth: "800px", 
+        margin: "0 auto", 
+        textAlign: "center" 
+      }}>
+        Rehoboth Dunkemo Integrated Services and Energy Ltd. is an integrated solutions and development company dedicated to advancing sustainable communities through the productive use of renewable energy and climate-smart agricultural systems.
 
-Operating at the intersection of energy and agriculture, we support communities, institutions and enterprises with systems that power farms, enable agro-processing, improve productivity and reduce dependence on fossil fuels. Our approach emphasizes local participation, knowledge transfer and capacity building to ensure that projects remain sustainable beyond implementation.
+        Our work combines clean energy technologies, modern agricultural practices, engineering expertise and collaborative partnerships to address critical development challenges including energy access, food security, job creation and environmental sustainability. We design and implement practical solutions that improve livelihoods while supporting long-term economic and ecological resilience.
 
-We partner with government agencies, development organizations, private sector stakeholders and local communities to deliver impactful initiatives that promote inclusive growth and responsible resource management.
+        Operating at the intersection of energy and agriculture, we support communities, institutions and enterprises with systems that power farms, enable agro-processing, improve productivity and reduce dependence on fossil fuels. Our approach emphasizes local participation, knowledge transfer and capacity building to ensure that projects remain sustainable beyond implementation.
 
- </TextBlock>
-</Fade>
-             <Col>
-        <Image src={aboutImage} alt="about" />
-      </Col>
-       
-          
-        </Container>
-      </Section>
+        We partner with government agencies, development organizations, private sector stakeholders and local communities to deliver impactful initiatives that promote inclusive growth and responsible resource management.
+      </TextBlock>
+    </Fade>
+
+    <Col style={{ 
+      display: "flex", 
+      justifyContent: "center", 
+      marginTop: "20px" 
+    }}>
+      <Image2 
+        src={aboutImage} 
+        alt="about" 
+        style={{ maxWidth: "100%", height: "auto" }} 
+      />
+    </Col>
+
+  </Container>
+</Section>
 
       {/* VISION & MISSION */}
       <Split>
@@ -645,6 +662,14 @@ const Image = styled.img`
   width: 100%;
   // max-width: 400px;
   height:300px;
+  border-radius: 12px;
+  object-fit:cover;
+`;
+
+const Image2 = styled.img`
+  width: 600px;
+  // max-width: 400px;
+//   height:300px;
   border-radius: 12px;
   object-fit:cover;
 `;
