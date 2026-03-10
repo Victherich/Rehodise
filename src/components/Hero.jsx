@@ -7,6 +7,7 @@ import h3 from '../Images/h3.jpeg'
 import h4 from '../Images/h4.jpeg'
 import h5 from '../Images/h5.jpeg'
 import h6 from '../Images/h6.jpeg'
+import g7 from '../Images/g7.jpeg'
 import { useNavigate } from "react-router-dom";
 
 // const images = [
@@ -25,7 +26,7 @@ import { useNavigate } from "react-router-dom";
 //   "https://images.unsplash.com/photo-1605000797499-95a51c5269ae", // tractor modern farming
 // ];
 
-const images = [h1,h2,h3,h4,h5, h6]
+const images = [h1,h2,h3,h4,h5, h6, g7]
 
 const Hero = () => {
   const [index, setIndex] = useState(0);

@@ -138,20 +138,25 @@ const handleSubmit = async (e) => {
         <Left>
           <Fade>
             <h2 style={{color:"white"}}>Contact Information</h2>
+            <br/>
 
             <Info>
-              <h4>Phone</h4>
-              <p>+234 806 487 6315</p>
+              <h4>Phone:</h4>
+                <p>+234 806 487 6315</p>
+                 <p>+234 803 730 7078</p>
             </Info>
 
             <Info>
-              <h4>Email</h4>
-              <p>info@rehodise.com.ng</p>
-              <p>rehobothdunkemointegrated@gmail.com</p>
+              <h4>Emails: </h4>
+                  <p>info@rehodise.com.ng</p>
+                <p>edwin@rehodise.com.ng</p>
+                <p>humphrey@rehodise.com.ng</p>
+               
+             
             </Info>
 
             <Info>
-              <h4>Location</h4>
+              <h4>Location:</h4>
               <p>15, Amaozarah New Layout, Amaozarah, Ebonyi State.</p>
             </Info>
           </Fade>
@@ -197,19 +202,23 @@ const handleSubmit = async (e) => {
         </Right>
       </Split>
 
-      {/* MAP */}
-      <MapSection>
-        <Fade>
-          <h2>Our Location</h2>
-        </Fade>
+     {/* MAP */}
+<MapSection>
+  <Fade>
+    <h2>Our Location</h2>
+  </Fade>
 
-        <MapWrapper>
-          <iframe
-            title="map"
-            src="https://maps.google.com/maps?q=lagos&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          />
-        </MapWrapper>
-      </MapSection>
+  <MapWrapper>
+    <iframe
+      title="map"
+      src="https://maps.google.com/maps?q=15%20Amaozarah%20New%20Layout%20Amaozarah%20Ebonyi%20State%20Nigeria&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      loading="lazy"
+    />
+  </MapWrapper>
+</MapSection>
 
     </Page>
   );
@@ -307,6 +316,9 @@ const Right = styled.div`
 
 const Info = styled.div`
   margin-bottom: 20px;
+  p{
+  font-size:0.9rem;
+  }
 `;
 
 /* FORM */

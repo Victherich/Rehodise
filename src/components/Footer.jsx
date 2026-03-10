@@ -12,6 +12,9 @@ const Footer = () => {
           {/* LOGO & BRAND */}
           <Brand>
             <Logo src={LogoImage} alt="Rehoboth Dunkemo Logo" />
+            <br/>
+            <p style={{marginBottom:"10px", fontSize:"0.8rem", fontWeight:"bold"}}>RC 1933377 </p>
+            
             <Tagline>We are an integrated development and technology company committed to strengthening communities through renewable energy systems and climate-smart agricultural solutions. By combining modern engineering, smart farming practices and collaborative partnerships, we support improved food production, energy access and sustainable livelihoods.</Tagline>
           </Brand>
 
@@ -35,9 +38,12 @@ const Footer = () => {
             <NavColumn>
               <ColumnTitle>Contact Us</ColumnTitle>
               <ContactInfo>
-                <p>Email: <a href="mailto:info@rehobothdunkemo.com">info@rehobothdunkemo.com</a></p>
-                <p>Email: <a href="mailto:rehobothdunkemointegrated@gmail.com">rehobothdunkemointegrated@gmail.com</a></p>
+                <p>Email: <a href="mailto:info@rehodise.com.ng">info@rehodise.com.ng</a></p>
+                <p>Email: <a href="mailto:edwin@rehodise.com.ng">edwin@rehodise.com.ng</a></p>
+                <p>Email: <a href="mailto:humphrey@rehodise.com.ng">humphrey@rehodise.com.ng</a></p>
+                {/* <p>Email: <a href="mailto:rehobothdunkemointegrated@gmail.com">rehobothdunkemointegrated@gmail.com</a></p> */}
                 <p>Phone: <a href="tel:+1234567890">+234 806 487 6315</a></p>
+                 <p>Phone: <a href="tel:+1234567890">+234 803 730 7078</a></p>
                 <p>Address: 15, Amaozarah New Layout, Amaozarah, Ebonyi State</p>
               </ContactInfo>
 {/* 
@@ -98,7 +104,7 @@ const Brand = styled.div`
 
 const Logo = styled.img`
   max-width: 50px;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
 `;
 
 const Tagline = styled.p`

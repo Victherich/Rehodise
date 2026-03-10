@@ -24,8 +24,8 @@ const solutions = [
   {
     title: "Smart Agriculture & Agribusiness",
     items: [
-      "Mechanized farming systems",
-      "Poultry & livestock",
+      "Smart mechanized farming systems",
+      "Farm birds & livestock",
       "Agro-processing",
       "Climate-smart farming",
       "Export & trading support",
