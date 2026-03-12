@@ -6,6 +6,7 @@ import g9 from '../Images/g9.jpeg'
 import g1 from '../Images/g1.jpeg'
 import g6 from '../Images/g6.jpeg'
 import g4 from '../Images/g4.jpeg'
+import gl15 from '../Images/gl15.jpeg'
 
 /* ================= STYLES ================= */
 
@@ -144,6 +145,15 @@ const ShowcaseSection = () => {
              </Content>
           </Card>
 
+            <Card>
+            <Image src={g8} alt="Rice Husk Biomass Energy Evaluation" />
+            <Content>
+              <Text>
+                Biogas Demonstration plant at Government College Afikpo through UK ISPF project 2024/2025.
+              </Text>
+            </Content>
+          </Card>
+
   
 
         </Grid>
@@ -157,22 +167,22 @@ const ShowcaseSection = () => {
         <Header>
         
           <MainTitle>Ongoing Project</MainTitle>
-            {/* <SmallTitle>ISPF PROJECT ON BIOGAS ADOPTION IN NIGERIA.</SmallTitle> */}
+            <SmallTitle>EVALUATION OF MODIFIED RICE HUSK PELLETS FOR BIOMASS ENERGY PRODUCTION</SmallTitle>
             {/* <SmallTitle>In partnership with Newcastle University and Federal Polytechnic Unwan, Nigeria.</SmallTitle> */}
         </Header>
 
         <Grid2>
 
-        
-
           <Card>
-            <Image src={g8} alt="Rice Husk Biomass Energy Evaluation" />
+            <Image src={gl15} alt="Biogas Demonstration Plant" />
             <Content>
-              <Text>
-                Biogas Demonstration plant at Government College Afikpo through UK ISPF project 2024/2025.
-              </Text>
+              {/* <Text>
+               Biogas Demonstration plant at Government College Afikpo through UK ISPF project 2024/2025.
+              </Text> */}
             </Content>
           </Card>
+
+        
 
             <Card>
             <Image src={g7} alt="Biogas Demonstration Plant" />
