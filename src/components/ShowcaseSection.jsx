@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import g7 from "../Images/g7.jpeg";
 import g8 from "../Images/g8.jpeg";
+import g9 from '../Images/g9.jpeg'
+import g1 from '../Images/g1.jpeg'
+import g6 from '../Images/g6.jpeg'
+import g4 from '../Images/g4.jpeg'
 
 /* ================= STYLES ================= */
 
@@ -22,7 +26,7 @@ const Header = styled.div`
 
 const SmallTitle = styled.p`
   text-transform: uppercase;
-  letter-spacing: 2px;
+//   letter-spacing: 2px;
   font-size: 14px;
   color: #1b67a8;
   margin-bottom: 10px;
@@ -34,6 +38,16 @@ const MainTitle = styled.h2`
 `;
 
 const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const Grid2 = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
@@ -83,14 +97,76 @@ const ShowcaseSection = () => {
       <Container>
 
         <Header>
-          <SmallTitle>Highlights</SmallTitle>
-          <MainTitle>Project Highlights</MainTitle>
+        
+          <MainTitle>Completed Project</MainTitle>
+            <SmallTitle>ISPF PROJECT ON BIOGAS ADOPTION IN NIGERIA.</SmallTitle>
+            <SmallTitle>In partnership with Newcastle University and Federal Polytechnic Unwan, Nigeria.</SmallTitle>
         </Header>
 
         <Grid>
 
+        
+
+  
+
+            <Card>
+            <Image src={g9} alt="Biogas Demonstration Plant" />
+            <Content>
+              <Text>
+              Stakeholders/community engagement in Biogas Project in partnership with ISPF, Newcastle University and Federal Polytechnic Unwan, Afikpo Nigeria.  </Text>
+            </Content>
+          </Card>
+
+            <Card>
+            <Image src={g1} alt="Biogas Demonstration Plant" />
+            <Content>
+              <Text>
+             Workshop/Stakeholders Community engagement on Biogas Technology Initiative
+             </Text>
+             </Content>
+          </Card>
+
+            <Card>
+            <Image src={g6} alt="Biogas Demonstration Plant" />
+            <Content>
+              <Text>
+             Stakeholders/community engagement in Biogas Project in partnership with ISPF, Newcastle University and Federal Polytechnic Unwan, Afikpo Nigeria.
+             </Text>
+             </Content>
+          </Card>
+
+             <Card>
+            <Image src={g4} alt="Biogas Demonstration Plant" />
+            <Content>
+              <Text>
+            Workshop/Stakeholders Community engagement on Biogas Technology Initiative
+              </Text>
+             </Content>
+          </Card>
+
+  
+
+        </Grid>
+
+      </Container>
+<br/>
+<br/>
+<br/>
+    <Container>
+
+        <Header>
+        
+          <MainTitle>Ongoing Project</MainTitle>
+            {/* <SmallTitle>ISPF PROJECT ON BIOGAS ADOPTION IN NIGERIA.</SmallTitle> */}
+            {/* <SmallTitle>In partnership with Newcastle University and Federal Polytechnic Unwan, Nigeria.</SmallTitle> */}
+        </Header>
+
+        <Grid2>
+
+        
+
           <Card>
-            <Image src={g7} alt="Biogas Demonstration Plant" />
+            <Image src={g8} alt="Rice Husk Biomass Energy Evaluation" />
             <Content>
               <Text>
                 Biogas Demonstration plant at Government College Afikpo through UK ISPF project 2024/2025.
@@ -98,18 +174,20 @@ const ShowcaseSection = () => {
             </Content>
           </Card>
 
-          <Card>
-            <Image src={g8} alt="Rice Husk Biomass Energy Evaluation" />
+            <Card>
+            <Image src={g7} alt="Biogas Demonstration Plant" />
             <Content>
               <Text>
-                Evaluation of Modified Rice Husk Pellets for Biomass Energy Production.
+               Biogas Demonstration plant at Government College Afikpo through UK ISPF project 2024/2025.
               </Text>
             </Content>
           </Card>
 
-        </Grid>
+        </Grid2>
 
       </Container>
+
+      
     </Section>
   );
 };

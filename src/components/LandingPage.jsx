@@ -15,9 +15,11 @@ const LandingPage = () => {
       <WhatWeDo/>
       <Impact/>
       <FeaturedInitiatives/>
-      <GallerySection/>
+      {/* <GallerySection/> */}
       <ShowcaseSection/>
       {/* <Partners/> */}
+
+      
      
     </div>
   )
