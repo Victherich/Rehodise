@@ -176,22 +176,22 @@ const ShowcaseSection = () => {
           <Card>
             <Image src={gl15} alt="Biogas Demonstration Plant" />
             <Content>
-              {/* <Text>
-               Biogas Demonstration plant at Government College Afikpo through UK ISPF project 2024/2025.
-              </Text> */}
+              <Text>
+               ISPF FUNDED PROJECT FOR AY 2024-25 BROUGHT BY NEWCASTLE UNIVERSITY UK IN PARTNERSHIP WITH AKANU IBIAM FED. POLY. UNWANA @ GSSA.
+              </Text>
             </Content>
           </Card>
 
         
 
-            <Card>
+            {/* <Card>
             <Image src={g7} alt="Biogas Demonstration Plant" />
             <Content>
               <Text>
                Biogas Demonstration plant at Government College Afikpo through UK ISPF project 2024/2025.
               </Text>
             </Content>
-          </Card>
+          </Card> */}
 
         </Grid2>
 
