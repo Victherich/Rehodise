@@ -149,7 +149,7 @@ const ShowcaseSection = () => {
             <Image src={gl15} alt="Biogas Demonstration Plant" />
             <Content>
               <Text>
-               ISPF FUNDED PROJECT FOR AY 2024-25 BROUGHT BY NEWCASTLE UNIVERSITY UK IN PARTNERSHIP WITH AKANU IBIAM FED. POLY. UNWANA @ GSSA.
+               Biogas Demonstration Plant at Government College Afikpo through UK ISPF project 2024/2025.
               </Text>
             </Content>
           </Card>
@@ -171,16 +171,16 @@ const ShowcaseSection = () => {
 <br/>
 <br/>
 <br/>
-    {/* <Container>
+    <Container>
 
         <Header>
         
           <MainTitle>Ongoing Project</MainTitle>
             <SmallTitle>EVALUATION OF MODIFIED RICE HUSK PELLETS FOR BIOMASS ENERGY PRODUCTION</SmallTitle>
-            <SmallTitle>In partnership with Newcastle University and Federal Polytechnic Unwan, Nigeria.</SmallTitle>
+            {/* <SmallTitle>In partnership with Newcastle University and Federal Polytechnic Unwan, Nigeria.</SmallTitle> */}
         </Header>
 
-        <Grid2>
+        {/* <Grid2>
 
           <Card>
             <Image src={gl15} alt="Biogas Demonstration Plant" />
@@ -202,9 +202,9 @@ const ShowcaseSection = () => {
             </Content>
           </Card>
 
-        </Grid2>
+        </Grid2> */}
 
-      </Container> */}
+      </Container>
 
       
     </Section>
